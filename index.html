@@ -68,7 +68,7 @@
     width:46px; height:46px;
     flex-shrink:0;
   }
-  .brand-seal img{ width:46px; height:46px; background:transparent; }
+  .brand-seal img{ width:46px; height:46px; background:transparent; animation: tremble 0.4s ease-in-out infinite; transform-origin: bottom center; }
   .brand-text{
     font-family:var(--utility); font-weight:600; font-size:14px;
     letter-spacing:0.06em; color:var(--navy); line-height:1.3;
@@ -156,10 +156,10 @@
   .btn-secondary{ background:transparent; color:var(--navy); }
   .btn-secondary:hover{ background:var(--navy); color:var(--cream-light); }
 
-  @keyframes rise{
-    from{ opacity:0; transform:translateY(16px); }
-    to{ opacity:1; transform:translateY(0); }
-  }
+  @keyframes tremble {
+  0%, 100% { transform: rotate(-4deg); }
+  50% { transform: rotate(4deg); }
+}
 
   /* ---------- Sections ---------- */
   section{ padding:84px 0; }
